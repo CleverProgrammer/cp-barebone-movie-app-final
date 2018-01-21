@@ -17,7 +17,9 @@
             </div>
             <div class="modal-footer">
             	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal-{{movie.id}}">Edit</button>
+                <a href="{% url 'delete' movie_id=movie.id %}" class="btn btn-danger">Delete</a>
             </div>
+
     	</div>
     </div>
 </div>
