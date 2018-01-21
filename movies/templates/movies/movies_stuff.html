@@ -36,6 +36,18 @@
 
             <section class="result">
             	<div class="container">
+
+                    <!-- Show notifications (if any) -->
+                    {% if messages %}
+                    	{% for message in messages %}
+                    		<div class="alert alert-{{ message.tags }}">
+                    			<a href="#" class="close" data-dismiss="alert">&times;</a>
+                                {{ message }}
+                    		</div>
+                    	{% endfor %}
+                    {% endif %}
+
+                    <!-- Show all movies -->
             		<div class="movies">
             			{% for movie in search_result %}
                             <div class="movies__item">
